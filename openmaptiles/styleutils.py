@@ -75,8 +75,8 @@ def merge(tileset_fp: Path, style_fp: Path, style_header_fp: Path):
 
     # sort style_lyrs by order, let sort take care of duplicates
     style_lyrs.sort(key=get_order)
-    # create a new list with original background layer
-    new_style_lyrs = style.get('layers')[:1]
+    # create a new list with original layers
+    new_style_lyrs = style.get('layers')
     # append sorted layers to new_style_lyrs
     for style_lyr in style_lyrs:
         # remove order kv
